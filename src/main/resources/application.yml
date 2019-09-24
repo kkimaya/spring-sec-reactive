@@ -1,0 +1,23 @@
+logging:
+  level: 
+    root: DEBUG
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: Wonj4ubfRwQL6c6Jpe6D607ORyNPgJzg
+            client-secret: T3SfYWuFe4t61xIm_2uqTVkyu86cyJA-Z34vPPCRnt0lbWot7YZI-erOxc1n7Ur1
+            scope: openid, email, profile
+            redirect-uri-template: http://localhost:8080/login/oauth2/code/auth0
+            client-authentication-method: post
+            authorization-grant-type: authorization_code
+        provider:
+          auth0:
+            token-uri: https://dev-r1-h0p99.auth0.com/oauth/token
+            authorization-uri: https://dev-r1-h0p99.auth0.com/authorize
+            user-info-uri: https://dev-r1-h0p99.auth0.com/userinfo
+            user-name-attribute: sub
+            jwk-set-uri: https://dev-r1-h0p99.auth0.com/.well-known/jwks.json
